@@ -15,7 +15,7 @@ function App() {
     <>
       <Video isHidden={modalShow} />
       <Container>
-        <Modal show={modalShow} onHide={() => setModalShow(false)} className="opacity-80" />
+        <Modal show={modalShow} onHide={() => setModalShow(false)} />
       </Container>
     </>
   );

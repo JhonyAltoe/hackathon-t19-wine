@@ -1,10 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-// import WineVideo from '../../assets/wine-pouring.mp4';
 
 export default function modal(props) {
   return (
-    <Modal {...props} size="sm" backdrop="static" aria-labelledby="contained-modal-title-vcenter">
+    <Modal
+      {...props}
+      size="sm"
+      backdrop="static"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="teste">
       <Modal.Header className="flex-column">
         <h4 className="text-center">Boas vindas à Wine!</h4>
         <p className="text-center">Você tem mais de 18 anos?</p>
