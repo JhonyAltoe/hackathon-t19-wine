@@ -3,13 +3,13 @@ import { getProductsWine } from './globalActions/getProductsWine';
 
 const initialState = {
   items: [],
-  loading: false
+  loading: false,
 };
 
 export const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: {},
+  reducers: { },
   extraReducers: {
     [getProductsWine.pending]: (state) => {
       state.loading = true;
