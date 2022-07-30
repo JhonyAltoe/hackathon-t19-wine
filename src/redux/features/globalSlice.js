@@ -5,13 +5,13 @@ import { getModalities } from './globalActions/getModalities';
 const initialState = {
   items: [],
   loading: false,
-  modalities: [],
+  modalities: []
 };
 
 export const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: { },
+  reducers: {},
   extraReducers: {
     [getProductsWine.pending]: (state) => {
       state.loading = true;
