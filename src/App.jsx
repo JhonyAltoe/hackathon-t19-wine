@@ -1,7 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Modal from './components/modal/modal';
-import Container from './components/modal/Container';
+import Modal from './components/modal';
+import Video from './components/video';
+import Container from 'react-bootstrap/Container';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -11,9 +12,12 @@ function App() {
   }, []);
 
   return (
-    <Container>
-      <Modal show={modalShow} onHide={() => setModalShow(false)} />
-    </Container>
+    <>
+      <Video isHidden={modalShow} />
+      <Container>
+        <Modal show={modalShow} onHide={() => setModalShow(false)} className="opacity-80" />
+      </Container>
+    </>
   );
 }
 
