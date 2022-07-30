@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import { FiGift } from 'react-icons/fi';
 
 function CardPlan({ name, price, priceWithDiscount, gift, promotion }) {
-  console.log(name);
   const type = name.includes('Anual') ? 'Anual' : 'Mensal';
   <style type="text/css">
     {`
