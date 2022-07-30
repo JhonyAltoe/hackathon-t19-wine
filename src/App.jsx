@@ -1,9 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import Homepage from './pages/Homepage';
 
 function App() {
-  return <Button variant="primary">Primary</Button>;
+  return <Homepage />;
 }
 
 export default App;
