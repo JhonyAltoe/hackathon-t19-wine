@@ -7,12 +7,7 @@ export const getProductsWine = createAsyncThunk('global/getProductsWine', async 
     const data = await resolve.json();
     return data.items;
   } catch (error) {
-    console.log('fetchGenericRecepies error');
+    console.log(`getProductsWine ${error.message}`);
     // return rejectWithValue(error)
   }
 });
-
-// https://wine-club-proxy.herokuapp.com/modalities
-
-// https://wine-back-test.herokuapp.com/products
-// https://documenter.getpostman.com/view/10015622/UVJiiuHi#fe849253-c47a-492f-a860-08350296c570
