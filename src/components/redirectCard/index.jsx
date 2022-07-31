@@ -23,9 +23,7 @@ export default function RedirectCard({ title, img, description, link1, color, or
               <Card.Title>
                 <h4 className="text-center">{title}</h4>
               </Card.Title>
-              <Card.Text>
-                <p>{description}</p>
-              </Card.Text>
+              <Card.Text>{description}</Card.Text>
             </Card.Body>
           </Card>
         </Col>

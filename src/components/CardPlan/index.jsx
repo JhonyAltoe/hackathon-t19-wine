@@ -21,17 +21,17 @@ function CardPlan({ name, price, priceWithDiscount, gift, promotion }) {
           <span className="text-center promotion">{promotion}</span>
           {/* <DiscountTag discount={discount} /> */}
         </div>
-        <Card.Text className="d-flex flex-column align-items-center text-center">
+        <Card className="d-flex flex-column align-items-center text-center">
           <p className="fs-6 mb-0 mt-2 price">{`R$ ${price.toFixed(2)} por`}</p>
-          <p className="fs-6 m-0">
+          <div className="fs-6 m-0">
             {'R$ '}
             <span className="fs-3 price-with-discount">{`${priceWithDiscount.toFixed(2)}`}</span>
             {'/mês'}
-          </p>
+          </div>
           <p style={{ fontSize: '0.7rem' }} className="x-small m-0 fs-sm">
             {`Economia de R$ ${((price - priceWithDiscount) * 12).toFixed(2)} em 12 meses`}
           </p>
-        </Card.Text>
+        </Card>
         <div className="d-flex flex-column align-items-center">
           <span className="border p-1 mb-2 rounded-2 gift">
             <FiGift /> {`${gift}`}

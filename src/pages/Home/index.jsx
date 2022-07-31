@@ -9,6 +9,7 @@ import Header from '../../components/Header';
 import CardPlan from '../../components/CardPlan';
 import SecPlan from '../../components/SecPlan';
 import RedirectCard from '../../components/redirectCard';
+import PalateTest from '../../components/PalateTest'
 import allCards from '../../utils/allCards';
 
 function Homepage() {
@@ -36,8 +37,6 @@ function Homepage() {
             <Header />
           </div>
           <Container>
-            <Container></Container>
-
             {items.length > 0 && modalities.length > 0 && (
               <SecPlan items={items} modalities={modalities} />
             )}
@@ -48,6 +47,7 @@ function Homepage() {
               gift="2 taças de cristal"
               promotion="4 MESES OFF"
             />
+            <PalateTest />
             {allCards.map((e) => (
               <RedirectCard {...e} key={e.title} />
             ))}
