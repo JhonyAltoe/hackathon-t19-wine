@@ -9,14 +9,15 @@ import Header from '../../components/Header';
 import CardPlan from '../../components/CardPlan';
 import SecPlan from '../../components/SecPlan';
 import RedirectCard from '../../components/redirectCard';
-import PalateTest from '../../components/PalateTest'
+import PalateTest from '../../components/PalateTest';
 import allCards from '../../utils/allCards';
+import IntroCard from '../../components/IntroCard';
 
 function Homepage() {
   const [modalShow, setModalShow] = useState(false);
   const { items, modalities } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  // console.log(items);
+  console.log(items);
   // console.log(loading);
   // console.log(modalities);
   useEffect(() => {
@@ -37,6 +38,7 @@ function Homepage() {
             <Header />
           </div>
           <Container>
+            <IntroCard />
             {items.length > 0 && modalities.length > 0 && (
               <SecPlan items={items} modalities={modalities} />
             )}
