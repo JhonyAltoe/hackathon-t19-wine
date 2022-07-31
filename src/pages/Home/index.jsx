@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import { useDispatch, useSelector } from 'react-redux';
-import CardPlan from '../../components/CardPlan';
-import SecPlan from '../../components/SecPlan';
 import { getModalities } from '../../redux/features/globalActions/getModalities';
 import { getProductsWine } from '../../redux/features/globalActions/getProductsWine';
 import Modal from '../../components/modal';
 import Video from '../../components/video';
 import Header from '../../components/Header';
+import CardPlan from '../../components/CardPlan';
+import SecPlan from '../../components/SecPlan';
+import RedirectCard from '../../components/redirectCard';
+import allCards from '../../utils/allCards';
 
 function Homepage() {
   const [modalShow, setModalShow] = useState(false);
@@ -46,6 +48,9 @@ function Homepage() {
               gift="2 taças de cristal"
               promotion="4 MESES OFF"
             />
+            {allCards.map((e) => (
+              <RedirectCard {...e} key={e.title} />
+            ))}
           </Container>
         </>
       )}
