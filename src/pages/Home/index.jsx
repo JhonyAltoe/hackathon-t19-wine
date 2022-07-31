@@ -6,7 +6,6 @@ import { getProductsWine } from '../../redux/features/globalActions/getProductsW
 import Modal from '../../components/modal';
 import Video from '../../components/video';
 import Header from '../../components/Header';
-import CardPlan from '../../components/CardPlan';
 import SecPlan from '../../components/SecPlan';
 import RedirectCard from '../../components/redirectCard';
 import PalateTest from '../../components/PalateTest';
@@ -39,13 +38,6 @@ function Homepage() {
             {items.length > 0 && modalities.length > 0 && (
               <SecPlan items={items} modalities={modalities} />
             )}
-            <CardPlan
-              name="Plano Anual"
-              price={99.9}
-              priceWithDiscount={65.93}
-              gift="2 taças de cristal"
-              promotion="4 MESES OFF"
-            />
             <PalateTest />
             {allCards.map((e) => (
               <RedirectCard {...e} key={e.title} />
