@@ -51,9 +51,9 @@ function Homepage() {
               <RedirectCard {...e} key={e.title} />
             ))}
           </Container>
+          <Footer />
         </>
       )}
-      <Footer />
     </>
   );
 }
