@@ -6,7 +6,7 @@ import './style.scss';
 
 function SecPlan({ modalities }) {
   return (
-    <Container className="container-planos border rounded rounded-2 justify-content-center bg-light ">
+    <Container className="container-planos justify-content-center bg-light ">
       <SwipperCarousel modalities={modalities} />
     </Container>
   );

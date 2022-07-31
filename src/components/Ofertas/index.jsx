@@ -6,7 +6,6 @@ import './style.scss';
 export default function ofertas() {
   const { items } = useSelector((state) => state.global);
   const winesForCarrousel = items.filter(({ id }) => id <= 2);
-  console.log(winesForCarrousel);
 
   return (
     <>

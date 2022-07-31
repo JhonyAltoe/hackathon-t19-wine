@@ -7,10 +7,10 @@ import PropTypes from 'prop-types';
 import Ofertas from '../Ofertas';
 import './style.scss';
 
-export default function RedirectCard({ title, img, description, link1, color, order }) {
+export default function RedirectCard({ title, img, description, color, order }) {
   return (
-    <Container className="flex-row-reverse" fluid="sm" as="a" href={link1} target="_blank">
-      <Row className="justify-content-center">
+    <Container className="flex-row-reverse" fluid="sm">
+      <Row className="justify-content-center mt-2 mb-2">
         <Col sm={6} className="redirectCard" xs={{ order }}>
           {order === 'first' ? <img src={img} className="img-fluid" /> : <Ofertas />}
         </Col>
