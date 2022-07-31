@@ -3,21 +3,25 @@ import { useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import { useDispatch, useSelector } from 'react-redux';
 import CardPlan from '../components/CardPlan';
+import SecPlan from '../components/SecPlan';
 import { getModalities } from '../redux/features/globalActions/getModalities';
 import { getProductsWine } from '../redux/features/globalActions/getProductsWine';
 
 function Homepage() {
-  const { items, loading, modalities } = useSelector((state) => state.global);
+  const { items, modalities } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  console.log(items);
-  console.log(loading);
-  console.log(modalities);
+  // console.log(items);
+  // console.log(loading);
+  // console.log(modalities);
   useEffect(() => {
     dispatch(getProductsWine());
     dispatch(getModalities());
   }, []);
   return (
     <Container>
+      {items.length > 0 && modalities.length > 0 && (
+        <SecPlan items={items} modalities={modalities} />
+      )}
       <CardPlan
         name="Plano Anual"
         price={99.9}
