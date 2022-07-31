@@ -1,0 +1,33 @@
+.palat-test-wrapper {
+  margin: 2rem auto;
+  border: 1px solid rgb(208, 208, 208);
+  padding: 0;
+  // display: flex;
+  // justify-content: center;
+
+  .wine-palate-description {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-style {
+    padding: 0;
+    height: 8rem;
+    width: 24rem;
+    object-fit: cover;
+  }
+
+  .custom-btn {
+    background-color: #C81A78;
+    border: none;
+    border-radius: 0;
+  }
+
+  h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+}
