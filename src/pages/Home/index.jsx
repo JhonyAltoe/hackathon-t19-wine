@@ -14,16 +14,12 @@ import allCards from '../../utils/allCards';
 import IntroCard from '../../components/IntroCard';
 
 function Homepage() {
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(true);
   const { items, modalities } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  console.log(items);
-  // console.log(loading);
-  // console.log(modalities);
   useEffect(() => {
     dispatch(getProductsWine());
     dispatch(getModalities());
-    setModalShow(true);
   }, []);
   return (
     <>
