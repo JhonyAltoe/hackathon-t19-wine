@@ -1,15 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getProductsWine } from './globalActions/getProductsWine';
+import { getModalities } from './globalActions/getModalities';
 
 const initialState = {
   items: [],
   loading: false,
+  modalities: []
 };
 
 export const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: { },
+  reducers: {},
   extraReducers: {
     [getProductsWine.pending]: (state) => {
       state.loading = true;
@@ -19,6 +21,16 @@ export const globalSlice = createSlice({
       state.loading = false;
     },
     [getProductsWine.rejected]: (state) => {
+      state.loading = false;
+    },
+    [getModalities.pending]: (state) => {
+      state.loading = true;
+    },
+    [getModalities.fulfilled]: (state, { payload }) => {
+      state.modalities = payload;
+      state.loading = false;
+    },
+    [getModalities.rejected]: (state) => {
       state.loading = false;
     }
   }
