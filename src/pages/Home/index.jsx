@@ -11,6 +11,7 @@ import SecPlan from '../../components/SecPlan';
 import RedirectCard from '../../components/redirectCard';
 import PalateTest from '../../components/PalateTest';
 import allCards from '../../utils/allCards';
+import IntroCard from '../../components/IntroCard';
 
 function Homepage() {
   const [modalShow, setModalShow] = useState(true);
@@ -33,6 +34,7 @@ function Homepage() {
             <Header />
           </div>
           <Container>
+            <IntroCard />
             {items.length > 0 && modalities.length > 0 && (
               <SecPlan items={items} modalities={modalities} />
             )}
