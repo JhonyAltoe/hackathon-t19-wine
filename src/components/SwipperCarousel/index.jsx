@@ -1,21 +1,14 @@
-// import Carousel from 'react-bootstrap/Carousel';
 import PropTypes from 'prop-types';
-// import ItemOfCarousel from './ItemOfCarousel';
-// import CardPlan from '../CardPlan';
-// import { Card } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
 import CardPlan from '../CardPlan';
 
 function SwipperCarousel({ modalities }) {
-  console.log(modalities.map((mod) => mod.name));
   return (
     <Swiper navigation={true} modules={[Navigation]} className="w-100 ">
-      {/* {modalities.map((mod) => { */}
       <SwiperSlide className="p-4 d-flex h-100 justify-content-center bg-light">
         <div>
           <div className="d-flex flex-column align-items-center text-center">
@@ -68,14 +61,6 @@ function SwipperCarousel({ modalities }) {
           </div>
         </div>
       </SwiperSlide>
-
-      {/* <SwiperSlide>
-        <img
-          src="https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/19252-01.png"
-          alt=""
-          srcSet=""
-        />
-      </SwiperSlide> */}
     </Swiper>
   );
 }
