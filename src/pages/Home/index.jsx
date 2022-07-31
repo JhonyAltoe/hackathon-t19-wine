@@ -12,6 +12,7 @@ import RedirectCard from '../../components/redirectCard';
 import PalateTest from '../../components/PalateTest';
 import allCards from '../../utils/allCards';
 import IntroCard from '../../components/IntroCard';
+import Footer from '../../components/footer';
 
 function Homepage() {
   const [modalShow, setModalShow] = useState(true);
@@ -52,6 +53,7 @@ function Homepage() {
           </Container>
         </>
       )}
+      <Footer />
     </>
   );
 }
