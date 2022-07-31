@@ -1,0 +1,49 @@
+.container {
+  padding: 0;
+  height: auto;
+  flex-direction: column;
+  
+  .palet-test-wrapper {
+    border: 1px solid rgb(208, 208, 208);
+    display: flex;
+    margin: 2rem auto;
+
+    .image-style {
+      padding: 0;
+      height: 8rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .wine-palate-description {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0;
+
+      h4 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .custom-btn {
+        background-color: #C81A78;
+        border: none;
+        border-radius: var(--btn-border-radius);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    flex-direction: row;
+    .palet-test-wrapper {
+      .wine-palate-description {
+        padding: 0;
+      }
+    }
+  }
+}
