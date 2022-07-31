@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ItemOfCarousel from './ItemOfCarousel';
 
 function PlanCarousel({ modalities }) {
-  console.log(modalities);
   return (
     <Carousel>
       {modalities.map((mod) => {

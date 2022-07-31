@@ -23,7 +23,7 @@ const IntroCard = () => {
         </div>
       </Col>
       <Col className="col-md-6">
-        <Carousel>
+        <Carousel fade controls={false} indicators={false} interval={2500}>
           <Carousel.Item>
             <img className="d-block w-100 image-style" src={img2Intro} alt="First slide" />
           </Carousel.Item>
